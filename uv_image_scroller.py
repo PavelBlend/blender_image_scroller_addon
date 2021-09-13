@@ -17,10 +17,8 @@ import bpy
 def set_image_by_index(context, image_index):
     images_count = len(bpy.data.images)
     if images_count > 0:
-        active_image = context.area.spaces[0].image
-        if active_image:
-            bpy_image = bpy.data.images[image_index]
-            context.area.spaces[0].image = bpy_image
+        bpy_image = bpy.data.images[image_index]
+        context.area.spaces[0].image = bpy_image
 
 
 def get_image_index(context):
@@ -52,6 +50,8 @@ class IMGSCROLL_OT_next_image(BaseOperator):
             if image_index < images_count:
                 next_image = bpy.data.images[image_index]
                 context.area.spaces[0].image = next_image
+        else:
+            bpy.ops.uv.first_image()
         return {'FINISHED'}
 
 
@@ -66,6 +66,8 @@ class IMGSCROLL_OT_prev_image(BaseOperator):
             if image_index >= 0:
                 prev_image = bpy.data.images[image_index]
                 context.area.spaces[0].image = prev_image
+        else:
+            bpy.ops.uv.first_image()
         return {'FINISHED'}
 
 
