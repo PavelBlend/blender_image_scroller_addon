@@ -13,7 +13,9 @@
 
 ## Установка
  - Скопировать файл `uv_image_scroller.py` в папку:
+
 `C:\Users\<USER_NAME>\AppData\Roaming\Blender Foundation\Blender\<BLENDER_VERSION>\scripts\addons\`
+
  - Запустить blender
  - Открыть настройки (`Edit` > `Preferences`)
  - Перейти в раздел `Add-ons`
