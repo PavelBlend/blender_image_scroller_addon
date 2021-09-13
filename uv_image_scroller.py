@@ -2,7 +2,7 @@ bl_info = {
     'name': 'Image Scroller',
     'description': 'Assigns hotkeys for scrolling images in Image Editor',
     'author': 'Pavel_Blend',
-    'version': (0, 1, 0),
+    'version': (0, 1, 1),
     'blender': (2, 80, 0),
     'location':
         'Image Editor > Page Up, Page Down, '
