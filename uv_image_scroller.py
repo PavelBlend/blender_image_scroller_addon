@@ -18,7 +18,7 @@ def set_image_by_index(context, image_index):
     images_count = len(bpy.data.images)
     if not images_count:
         return
-    if image_index < images_count:
+    if image_index < images_count and image_index >= 0:
         bpy_image = bpy.data.images[image_index]
         context.area.spaces[0].image = bpy_image
 
