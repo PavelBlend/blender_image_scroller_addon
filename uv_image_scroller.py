@@ -83,7 +83,7 @@ class IMGSCROLL_OT_scroll_image(bpy.types.Operator):
         elif self.mode == MODE_FIRST:
             image_index = 0
         elif self.mode == MODE_LAST:
-            image_index = -1
+            image_index = len(bpy.data.images) - 1
         set_image_by_index(context, image_index)
         return {'FINISHED'}
 
